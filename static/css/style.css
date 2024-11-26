@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #662a2a; /* Fondo oscuro más suave */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+    background-color: #181829; /* Fondo más oscuro para la calculadora */
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(85, 85, 85, 0.3); /* Sombra suave */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 70px); /* Botones más grandes */
+    gap: 12px;
+}
+
+.insert-result {
+    background-color: #245158; /* Azul más brillante */
+}
+
+.dilit{
+    background-color: #6d141d; /* Rojo intenso */
+}
+
+.clear-last{
+    background-color: #573734; /* Rojo suave */
+}
+
+.mci{
+    background-color: #283c52; /* Azul brillante */
+}
+
+.arbolin {
+    width: 180px;
+    background-color: #68866f; /* Verde suave */
+}
+
+button {
+    padding: 15px; /* Botones más grandes */
+    font-size: 18px; /* Tamaño de texto más grande */
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    background-color: #330e0e; /* Gris oscuro */
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #271d1d; /* Gris más oscuro al pasar el ratón */
+}
+
+.tree-container {
+    margin-left: 25%;
+    margin-top: 20px;
+    margin: 5%;
+}
+
+.node {
+    text-align: center;
+    padding: 10px;
+    margin: 12px auto;
+    background-color: #151a42; /* Fondo oscuro */
+    border-radius: 50%;
+    width: 50px; /* Aumentar el tamaño del nodo */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Tamaño de texto más grande */
+}
+
+.node operator {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 50px; /* Aumentar tamaño de los operadores */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Tamaño de texto más grande para operadores */
+}
+
+.left, .right {
+    display: inline-block;
+    padding-top: 50px;
+}
+
+#expression {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px; /* Tamaño de texto más grande para la expresión */
+}
+
+.tablas {
+    margin-right: 5%;
+}
+
+/* Estilo para la tabla */
+#tokens-table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#tokens-table th, #tokens-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+#tokens-table th {
+    background-color: #182330; /* Azul brillante para el encabezado */
+    color: white;
+    font-weight: bold;
+}
+
+#tokens-table tr:nth-child(even) {
+    background-color: #444; /* Color de fondo más oscuro para filas pares */
+}
+
+#tokens-table tr:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+.tree-node {
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.tree-node .node {
+    display: inline-block;
+    padding: 15px; /* Aumentar tamaño de los nodos */
+    border-radius: 50%;
+    background-color: #343a40; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    width: 60px; /* Aumentar tamaño de los nodos */
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 20px; /* Tamaño de texto más grande */
+}
+
+.tree-node .children {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px; /* Separación mayor entre nodos */
+    position: relative;
+}
+
+.tree-node .child {
+    width: 50%;
+}
+
+.tree-node .child::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    width: 2px;
+    height: 60px;
+    background: #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tree-node .child.left::before {
+    left: 75%;
+}
+
+.tree-node .child.right::before {
+    left: 25%;
+}
+
+.tree-node::before, .tree-node::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 30px;
+}
+
+.tree-node::before {
+    left: 0;
+    border-right: 2px solid #ccc;
+}
+
+.tree-node::after {
+    right: 0;
+}

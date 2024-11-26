@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator with Expression Tree</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="tablas">
+        <table id="tokens-table"></table>
+        <p id="total-numbers"></p>
+        <p id="total-operators"></p>
+    </div>
+
+    <div class="calculator">
+        <h5>Resultado: <span id="result"></span></h5>
+        <input id="expression" type="text" placeholder="Enter expression" readonly>
+        <div class="buttons">
+            <!-- Botones de calculadora -->
+            <button onclick="appendToExpression('7')">7</button>
+            <button onclick="appendToExpression('8')">8</button>
+            <button onclick="appendToExpression('9')">9</button>
+            <button onclick="appendToExpression('*')">*</button>
+            <button onclick="appendToExpression('4')">4</button>
+            <button onclick="appendToExpression('5')">5</button>
+            <button onclick="appendToExpression('6')">6</button>
+            <button onclick="appendToExpression('/')">/</button>
+            <button onclick="appendToExpression('1')">1</button>
+            <button onclick="appendToExpression('2')">2</button>
+            <button onclick="appendToExpression('3')">3</button>
+            <button onclick="appendToExpression('+')">+</button>
+            <button onclick="appendToExpression('0')">0</button>
+            <button onclick="appendToExpression('-')">-</button>
+            <button onclick="appendToExpression('.')">.</button>
+            <button onclick="appendToExpression('(')">(</button>
+            <button onclick="appendToExpression(')')">)</button>
+            <button class="dilit" onclick="clearExpression()">C</button>
+            <button class="mci" onclick="guardarResultado()">MC</button>
+            <button class="clear-last" onclick="clearLastDigit()">←</button>
+            <button class="insert-result" onclick="insertLastResult()">UR</button>
+            <button class="arbolin" onclick="calculateTree()">Tree</button>
+        </div>
+    </div>
+    <div class="tree-container">
+        <h2>Árbol:</h2>
+        <div id="tree"></div>
+    </div>
+
+    
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
